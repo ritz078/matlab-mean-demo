@@ -1,7 +1,8 @@
 {
-	"hours": 18,
-	"minutes": 58,
-	"seconds": 45,
+	"hours": 19,
+	"minutes": 15,
+	"seconds": 3,
 	"xAxis": 8970,
-	"yAxis": -0.6838117859
+	"yAxis": -0.6838117859,
+	"clock": [2015,5,27,19,15,3]
 }

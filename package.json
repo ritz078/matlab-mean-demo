@@ -1,0 +1,11 @@
+{
+  "name": "matlab-mean-demo",
+  "version": "1.0.0",
+  "description": "A demo web-app using Matlab and MEAN stack",
+  "main": "server.js",
+  "dependencies": {
+      "express": "latest",
+    "mongoose": "latest",
+    "socket.io": "^1.2.0"
+  }
+}

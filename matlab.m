@@ -7,5 +7,5 @@ while y >= 0
     x.hours=c(:,4);
     x.minutes=c(:,5);
     x.seconds=c(:,6);
-    savejson('',x,'data/c.json');
+    savejson('',x,'data/matlabData.json');
 end

@@ -1,10 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+    <meta charset="UTF-8">
+    <title>Matlab-MEAN Demo</title>
+    <style>
+    div {
+        text-align: center;
+        font-family: 'Calibri';
+        font-size: 100px;
+        top: 50%;
+        position: absolute;
+        left: 50%;
+        margin-left: -200px;
+        margin-top: -100px;
+    }
+    
+    [ng\:cloak],
+    [ng-cloak],
+    [data-ng-cloak],
+    [x-ng-cloak],
+    .ng-cloak,
+    .x-ng-cloak {
+        display: none !important;
+    }
+    </style>
 </head>
-<body>
-	
+
+<body ng-app="demo" ng-controller="demoController" ng-cloak class="ng-cloak">
+    <div>{{data.hours}} : {{data.minutes}} : {{data.seconds}}</div>
 </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+<script src='/socket.io.js'></script>
+<script>
+var socket = io.connect();
+
+angular.module('demo', []).controller('demoController', ['$scope', function($scope) {
+    socket.on('updated', function(data) {
+        $scope.data = data;
+        $scope.$apply();
+    });
+}]);
+</script>
+
 </html>
